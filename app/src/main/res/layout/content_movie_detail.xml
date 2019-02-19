@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_summary"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_view_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/CustomTitleTextAppearance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/movie_summary"/>
+
+                    <TextView
+                        android:id="@+id/summary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:maxLines="4"
+                        tools:text="毛克利（尼尔·塞西 Neel Sethi 饰）是一个由狼群养大的人类男孩，影片围绕他的森林冒险徐徐展开。谢利·可汗，一只受过人类伤害的老虎（伊德里斯·艾尔巴 Idris Elba 配音），发誓要将毛克利铲除。为了逃脱追捕，毛克利跟随严厉的导师黑豹巴希拉（本·金斯利 Ben Kingsley 配音）和自由自在的好友棕熊巴鲁（比尔·默瑞 Bill Murray 配音），踏上了一场精彩纷呈的自我探索旅程。在这趟旅途中，毛克利遇到了一些对他居心叵测的丛林生物，包括巨蟒卡奥（斯嘉丽·约翰逊 Scarlett Johansson 配音），她用迷人的声音和眼神迷惑毛克利；还有花言巧语的猩猩路易王（克里斯托弗·沃肯 Christopher Walken 配音），他试图通过威逼利诱让毛克利交出迷幻而致命的“红花”——火焰的秘密。当森林不再是安全的家园，毛克利该何去何从？而毕生难忘的伟大冒险，才刚刚拉开序幕……"/>
+
+                    <Button
+                        android:id="@+id/btn_summary_more"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_more"
+                        android:textColor="@color/colorAccent"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_celebrity"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_summary"
+                android:layout_marginTop="@dimen/card_view_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/CustomTitleTextAppearance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_movie_celebrity"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/list_celebrity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/activity_horizontal_margin"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_celebrity"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/card_view_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/CustomTitleTextAppearance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_movie_photos"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/list_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+                    <Button
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btn_photo_more"
+                        android:text="@string/btn_more"
+                        android:textColor="@color/colorAccent"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+</android.support.v4.widget.NestedScrollView>

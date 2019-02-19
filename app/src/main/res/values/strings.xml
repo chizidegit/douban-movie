@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">赤子的电影</string>
+    <string name="action_settings">设置</string>
+
+    <string name="welcome_text">欢迎使用赤子的电影</string>
+    <string name="network_error">网络异常，请稍后尝试。</string>
+    <string name="movie_type">类别：</string>
+    <string name="movie_summary">剧情梗概</string>
+    <string name="label_movie_celebrity">演职表</string>
+    <string name="movie_directors">导演:</string>
+    <string name="movie_cast">主演:</string>
+    <string name="toast_server_error">抱歉，服务器异常…</string>
+    <string name="toast_api_limited">抱歉，已达到服务访问上限…</string>
+    <string name="title_activity_movie_detail">详情</string>
+    <string name="title_activity_home">首页</string>
+    <string name="title_fragment_in">正在热映</string>
+    <string name="title_fragment_soon">即将上映</string>
+    <string name="title_fragment_top">热榜经典</string>
+    <string name="fab_scrolling_view_behavior">com.aaron.doubanmovie.common.ScrollAwareFabBehavior</string>
+    <string name="label_rating_unavailable">暂无评分</string>
+    <string name="btn_more">更多</string>
+    <string name="btn_collapse">收起</string>
+    <string name="label_movie_photos">剧照</string>
+    <string name="suffix_photo_wall">的剧照</string>
+</resources>
